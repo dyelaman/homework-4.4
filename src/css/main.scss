@@ -52,4 +52,27 @@
   font-family: 'MuseoSansCyrl', sans-serif;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+
+  .menu {
+    display: flex;
+
+    .menu__item {
+
+
+      a {
+        color: white;
+        text-decoration: none;
+
+      }
+    }
+  }
+
 }
