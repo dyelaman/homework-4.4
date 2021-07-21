@@ -65,6 +65,7 @@ header {
   }
 
   .row {
+    display: flex;
     align-items: center;
   }
 
@@ -98,7 +99,6 @@ header {
 
   .contacts {
       display:flex;
-      float: right;
 
     .contacts__phone {
       font-size: 16px;
@@ -168,7 +168,14 @@ header {
     box-shadow: 1px 1.7px 4px 0 rgba(149, 147, 147, 0.33);
     background-color: #f4f4f4;
     height: 357px;
-    width: 370px;
+
+    &:nth-child(2) {
+      padding: 57px 32px 60px 35px;
+    }
+
+    &:nth-child(3) {
+      padding: 58px 35px 60px 31px;
+    }
 
 
     h3 {
@@ -616,6 +623,7 @@ header {
   padding-bottom: 17px;
 
   .row {
+    display: flex;
     align-items: center;
   }
 
@@ -664,3 +672,4 @@ header {
     }
   }
 }
+

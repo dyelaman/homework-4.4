@@ -4,83 +4,14 @@
     {% include "./components/head.njk" %}
 </head>
 <body>
-    <header>
-        <div class="top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <a href="#">
-                            <img src="../img/logo.png">
-                        </a>
-                    </div>
-                    <div class="col-md-7">
-                        <nav>
-                            <ul class="menu">
-                                <li class="menu__item">
-                                    <a href="#">
-                                        Главная
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#">
-                                        О компании
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#">
-                                        ВНЖ и ПМЖ в Болгарии
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#">
-                                        Недвижимость и переезд
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="contacts">
-                            <div class="contacts__img">
-                                <a href="#">
-                                    <img src="../img/phone.png">
-                                </a>
-                            </div>
-                            <div class="contacts__phone">
-                                +7 (495) 12-321-345 <br>
-                                +7 (495) 12-321-345
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="first__screen">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Болгария</h1>
-                        <p>Ждет вас</p>
-                        <a href="#">
-                            <img src="../img/arrowheader.png">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include "./components/header.njk" %}
     <section id="advantages">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2>Наши преимущества</h2>
                 </div>
-                <div class="col-md-4" >
+                <div class="col-md-4 col-sm-6" >
                     <div class="wrapper">
                         <div class="image">
                             <img src="../img/handshake.png">
@@ -89,7 +20,7 @@
                         <p>Мы всегда придем к вам на помощь в решении самых неоднозначных вопросов</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="wrapper">
                         <div class="image">
                             <img src="../img/blocknote.png">
@@ -98,7 +29,7 @@
                         <p>Достоверность - главный принцип нашей работы. Мы знаем все тонкости переезда в Болгарию и оформления соответствующих документов</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12">
                     <div class="wrapper">
                         <div class="image">
                             <img src="../img/people.png">
@@ -226,35 +157,6 @@
             </div>
         </div>
     </section>
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="#">
-                        <img src="../img/logofooter.png">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <p>2016 / Все права защищены</p>
-                </div>
-                <div class="col-md-3">
-                    <a class="politik" href="#">Политика конфиденциальности</a>
-                </div>
-                <div class="col-md-3">
-                    <div class="contacts">
-                        <div class="contacts__img">
-                            <a href="#">
-                                <img src="../img/phonefooter.png">
-                            </a>
-                        </div>
-                        <div class="contacts__phone">
-                            +7 (495) 12-321-345 <br>
-                            +7 (495) 12-321-345
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "./components/footer.njk" %}
 </body>
 </html>
