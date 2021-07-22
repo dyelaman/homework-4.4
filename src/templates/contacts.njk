@@ -5,7 +5,120 @@
 </head>
 <html>
     <body>
-    {% include "./components/header.njk" %}
+    <section id="header">
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
+                        <a href="#">
+                            <img src="../img/logo.png">
+                        </a>
+                    </div>
+                    <div class="col-md-7 col-lg-7">
+                        <nav class="hidden-sm hidden-xs">
+                            <ul class="menu">
+                                <li class="menu__item">
+                                    <a href="#">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">
+                                        Переезд в Болгарию
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">
+                                        Открытие представительства
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 ">
+                        <div class="contacts">
+                            <div class="contacts__img">
+                                <a href="#">
+                                    <img src="../img/phone.png">
+                                </a>
+                            </div>
+                            <div class="contacts__phone">
+                                +7 (495) 12-321-345
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="first__screen">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Контакты</h1>
+                        <a href="#">
+                            <img src="../img/arrowheader.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="form">
+                    <div class="col-md-12">
+                        <p>Мы всегда на связи и ответим на все интересующие Вас вопросы!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wrapper__first">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../img/cellphone.png">
+                                </div>
+                                <div class="item__text">
+                                    <h5>Телефоны</h5>
+                                    <p>В Болгарии  8 (123) 12-123-123<br>
+                                        В России     8 (495) 12-123-123</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../img/sobachka.png">
+                                </div>
+                                <div class="item__text">
+                                    <h5>E-mail</h5>
+                                    <p>info@sitename.ru</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../img/skype.png">
+                                </div>
+                                <div class="item__text">
+                                    <h5>Skype</h5>
+                                    <p>skypename</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {% include "./components/footer.njk" %}
     </body>
 </html>
