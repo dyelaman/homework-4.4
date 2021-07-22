@@ -784,6 +784,7 @@ header {
     line-height: 1.21;
     text-align: left;
     color: rgba(250, 247, 247, 0.76);
+    white-space: nowrap;
 
     @include r(768) {
       display: none;
@@ -828,12 +829,14 @@ header {
 
   .top {
     background-image: url("../img/headershadow.png");
+
+    .row {
+      display: flex;
+      align-items: center;
+    }
   }
 
-  .row {
-    display: flex;
-    align-items: center;
-  }
+
 
   .menu {
     display: flex;
@@ -865,6 +868,11 @@ header {
 
   .contacts {
     display:flex;
+    white-space: nowrap;
+
+    @include r(992) {
+      margin-left: 200px;
+    }
 
     .contacts__phone {
       font-size: 16px;
@@ -891,6 +899,21 @@ header {
     }
   }
 
+  .burger {
+    float: right;
+
+    @include r-min(992) {
+      display: none;
+    }
+
+    .block {
+      width: 28px;
+      height: 5px;
+      margin-bottom: 3px;
+      background-color: white;
+    }
+  }
+
   .first__screen {
 
 
@@ -898,7 +921,6 @@ header {
       font-size: 51px;
       font-weight: 900;
       text-transform: uppercase;
-      line-height: 1.27;
       letter-spacing: 10.2px;
       text-align: center;
       color: rgba(255, 255, 255, 0.91);
@@ -925,11 +947,26 @@ header {
 }
 
 #contacts {
+  background-color: #f7f7f7;
+
+  @include r(992) {
+    background-color: #ffffff;
+  }
 
   .wrapper {
     padding: 54px 101px 62px 110px;
     box-shadow: 0 3px 1px 0 rgba(159, 160, 160, 0.18);
     background-color: #ffffff;
+    width: 1030px;
+    margin-top: -100px;
+    margin-bottom: 87px;
+
+    @include r(992) {
+      margin-top: 40px;
+      box-shadow: none;
+      width: 100%;
+      padding: 0;
+    }
 
     p {
       font-size: 17px;
@@ -941,43 +978,70 @@ header {
     }
 
     .wrapper__first {
+      display: flex;
+      justify-content: space-between;
 
-      .item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 70px;
+      @include r(768) {
+        flex-direction: column;
+      }
 
-        &:nth-child(1) {
-          margin-top: 135px;
-        }
+      .wrapper__second {
 
-        .img {
-          margin-right: 35px;
-        }
 
-        h5 {
-          font-size: 18px;
-          font-weight: 900;
-          line-height: 1.56;
-          color: #000000;
-          text-transform: uppercase;
-          margin-bottom: 15px;
-        }
+        .item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 70px;
 
-        p {
-          font-size: 16px;
-          font-weight: 100;
-          line-height: 1.5;
-          text-align: left;
-          color: #000000;
+          @include r(768) {
+            flex-direction: column;
+          }
+
+          &:nth-child(1) {
+            margin-top: 135px;
+          }
+
+          .img {
+            margin-right: 35px;
+
+            @include r(768) {
+              text-align: center;
+              margin-right: 10px;
+            }
+          }
+
+          h5 {
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 1.56;
+            color: #000000;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+
+            @include r(768) {
+              text-align: center;
+              margin-top: 33px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 1.5;
+            text-align: left;
+            color: #000000;
+
+            @include r(768) {
+              text-align: center;
+            }
+          }
         }
       }
     }
 
+
     .form {
-      padding-top: 44px;
-      padding-bottom: 43px;
-      border-radius: 3px;
+      padding: 44px 24px 43px 36px;
       background-color: #11b2f5;
       margin-top: 56px;
 
@@ -1038,6 +1102,10 @@ header {
             &:hover {
               opacity: 1;
             }
+
+            @include r(768) {
+              width: 370px;
+            }
           }
         }
 
@@ -1053,6 +1121,11 @@ header {
           text-align: center;
           color: #ffffff;
           white-space: nowrap;
+
+          @include r(768) {
+            padding-right: 80px;
+            padding-left: 80px;
+          }
          }
       }
     }
