@@ -1441,11 +1441,15 @@ header {
         @include r(992) {
           margin-right: 0;
         }
+
+        @include r(768) {
+          text-align: center;
+          margin-top: 5px;
+        }
       }
 
       .img__second {
         margin-right: 163px;
-        order: 2;
 
         @include r(992) {
           margin-right: 0;
@@ -1465,7 +1469,7 @@ header {
         margin-right: 124px;
         margin-left: 88px;
         width: 402px;
-        order: 1;
+
 
         @include r(992) {
           margin-right: 40px;
@@ -1473,7 +1477,10 @@ header {
         }
 
         @include r(768){
-          order: -1;
+          order: 3;
+          text-align: center;
+          margin-top: 5px;
+          margin-left: 10px;
         }
       }
     }
