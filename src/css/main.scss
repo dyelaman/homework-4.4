@@ -57,17 +57,19 @@ header {
 
   .top {
     background-image: url("../img/headershadow.png");
-  }
 
-  .row {
-    display: flex;
-    align-items: center;
-    flex-basis: 100%;
-
-    div {
-      flex-grow: 1;
+    a {
+      display:flex;
     }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+      }
   }
+
+
 
   .menu {
     display: flex;
@@ -85,13 +87,13 @@ header {
         text-align: left;
         color: #ffffff;
         text-transform: uppercase;
+        padding: 10px 6px 10px 6px;
+        border-radius: 4px;
 
         &:hover {
           background: #24354a;
           color: #fff;
           text-decoration: none;
-          padding: 10px 6px 10px 6px;
-          border-radius: 4px;
         }
       }
     }
@@ -100,6 +102,7 @@ header {
   .contacts {
     display:flex;
     white-space: nowrap;
+    float: right;
 
     @include r(992) {
       justify-content: flex-end;
@@ -128,6 +131,11 @@ header {
 
     @include r-min(992) {
       display: none;
+    }
+
+    @include r(768) {
+      margin-left: auto;
+      margin-right: 50px;
     }
 
     .block {
@@ -195,7 +203,7 @@ header {
     letter-spacing: 4.2px;
     text-align: center;
     color: #000000;
-    margin-bottom: 119px;
+    margin-bottom: 62px;
     text-transform: uppercase;
   }
 
@@ -301,8 +309,17 @@ header {
   .block {
     padding: 59px 38px 58px 70px;
     border: dotted 2px #ffffff;
-    margin-bottom: 71px;
     position: relative;
+    width: 770px;
+    margin: 0 auto 71px auto;
+
+    @include r(992) {
+      width: 600px;
+    }
+
+    @include r(768) {
+      width: 475px;
+    }
 
     .opacity {
       font-size: 19px;
@@ -385,7 +402,9 @@ header {
 #merits {
   background-image: url("../img/city.png");
   padding-top: 108px;
-  padding-bottom: 118px;
+  padding-bottom: 90px;
+  background-size: cover;
+  margin-bottom: 75px;
 
   @include r(992) {
     background-size: contain;
@@ -578,6 +597,11 @@ header {
     .girl {
       position: absolute;
       left: -66px;
+      top: calc(50% - 66px);
+
+      @include r(992) {
+        left: -105px;
+      }
 
       @include r(768) {
         left: calc(50% - 66px);
@@ -588,10 +612,10 @@ header {
     .left__arrow {
       position: absolute;
       right: -100px;
-      top: 100px;
+      top: calc(50% - 6px);
 
       @include r(992) {
-        right: -25px;
+        right: -85px;
       }
 
       @include r(768) {
@@ -602,10 +626,10 @@ header {
     .right__arrow {
       position: absolute;
       left: -166px;
-      top: 100px;
+      top: calc(50% - 6px);
 
       @include r(992) {
-        left: -86px;
+        left: -140px;
       }
 
       @include r(768) {
@@ -675,7 +699,7 @@ header {
   }
 
   .image__circle {
-
+    text-align: center;
   }
 }
 #questions {
@@ -725,11 +749,14 @@ header {
       letter-spacing: 1.3px;
       color: rgba(255, 255, 255, 0.56);
       text-transform: uppercase;
-      opacity: 0.56;
 
       &:hover {
-        opacity: 1;
         color: black;
+        box-shadow: 0 0 35px 0 rgba(14, 14, 14, 0.3);
+
+        &::placeholder {
+          color: white;
+        }
       }
     }
 
@@ -748,7 +775,8 @@ header {
       background-image: url("../img/bluebackground.png");
 
       &:hover {
-        color: black;
+        color: deeppink;
+        box-shadow: 0 0 35px 0 rgba(14, 14, 14, 0.3);
       }
     }
   }
@@ -832,6 +860,10 @@ header {
   .top {
     background-image: url("../img/headershadow.png");
 
+    a {
+      display: flex;
+    }
+
     .row {
       display: flex;
       align-items: center;
@@ -903,10 +935,14 @@ header {
 
   .burger {
     float: right;
-    margin-right: 15px;
+
 
     @include r-min(992) {
       display: none;
+    }
+
+    @include r(992) {
+      margin-left: 45px;
     }
 
     .block {
@@ -989,7 +1025,6 @@ header {
       }
 
       .wrapper__second {
-
 
         .item {
           display: flex;
@@ -1094,7 +1129,7 @@ header {
             border: solid 1px #ffffff;
             background-color: #30c2ff;
             text-transform: uppercase;
-            opacity: 0.6;
+
             width: 292px;
             font-size: 11px;
             font-weight: 300;
@@ -1103,7 +1138,11 @@ header {
             color: rgba(255, 255, 255, 0.56);
 
             &:hover {
-              opacity: 1;
+              box-shadow: 0 0 35px 0 rgba(14, 14, 14, 0.3);
+
+              &::placeholder {
+                color: white;
+              }
             }
 
             @include r(768) {
@@ -1124,6 +1163,13 @@ header {
           text-align: center;
           color: #ffffff;
           white-space: nowrap;
+
+          &:hover {
+            box-shadow: 0 0 35px 0 rgba(14, 14, 14, 0.3);
+
+            &::placeholder {}
+            color: darkorange;
+          }
 
           @include r(768) {
             padding-right: 80px;
@@ -1263,6 +1309,37 @@ header {
       padding-bottom: 30px;
       width: 100%;
       margin-top: 58px;
+      position: relative;
+
+      &:after {
+        content:'';
+        display: block;
+        background-color: #23aae2;
+        position: absolute;
+        height: 90px;
+        width: 100px;
+        left: -66px;
+        top: 0;
+
+        @include r(992) {
+          display: none;
+        }
+      }
+
+      &:before {
+        content:'';
+        display: block;
+        background-color: #23aae2;
+        position: absolute;
+        height: 90px;
+        width: 100px;
+        right: -66px;
+        top: 0;
+
+        @include r(992) {
+          display: none;
+        }
+      }
 
       p {
         font-size: 23px;
