@@ -888,13 +888,14 @@ header {
         text-align: left;
         color: #ffffff;
         text-transform: uppercase;
+        padding: 10px 6px 10px 6px;
+        border-radius: 4px;
 
         &:hover {
           background: #24354a;
           color: #fff;
           text-decoration: none;
-          padding: 10px 6px 10px 6px;
-          border-radius: 4px;
+
         }
       }
     }
@@ -903,6 +904,7 @@ header {
   .contacts {
     display:flex;
     white-space: nowrap;
+    float: right;
 
     @include r(992) {
       margin-left: 200px;
